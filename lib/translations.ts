@@ -107,7 +107,7 @@ export const translations = {
         title: "Contact Info",
         email: "Email",
         location: "Location",
-        locationValue: "San Francisco, CA",
+        locationValue: "Baku, Azerbaijan",
       },
       faq: {
         title: "FAQ",
@@ -243,7 +243,7 @@ export const translations = {
         title: "Əlaqə Məlumatları",
         email: "E-poçt",
         location: "Yer",
-        locationValue: "San Francisco, CA",
+        locationValue: "Bakı, Azərbaycan",
       },
       faq: {
         title: "Tez-tez Verilən Suallar",

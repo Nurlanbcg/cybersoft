@@ -192,10 +192,10 @@ export function Contact() {
                   <div>
                     <p className="font-medium">{t.contact.info.email}</p>
                     <a
-                      href="mailto:hello@cybersoft.dev"
+                      href="mailto:sales@cybersoft.az"
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      hello@cybersoft.dev
+                      sales@cybersoft.az
                     </a>
                   </div>
                 </div>
