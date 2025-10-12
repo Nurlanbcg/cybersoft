@@ -21,9 +21,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Cybersoft - Building the Future of Web & SaaS",
+  title: "Cybersoft",
   description: "Cybersoft designs high-impact websites and scalable SaaS products that help businesses grow.",
-  generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
