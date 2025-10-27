@@ -51,10 +51,21 @@ export function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
 
-    if (validateForm()) {
+  if (!validateForm()) return
+
+  try {
+    const response = await fetch("https://contact-worker.<your-username>.workers.dev", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+
+    const data = await response.json()
+
+    if (response.ok) {
       toast({
         title: t.contact.form.success.title,
         description: t.contact.form.success.description,
@@ -68,8 +79,21 @@ export function Contact() {
         message: "",
       })
       setErrors({})
+    } else {
+      toast({
+        title: "Error",
+        description: data.message || "Failed to send message. Please try again later.",
+        variant: "destructive",
+      })
     }
+  } catch (error) {
+    toast({
+      title: "Network Error",
+      description: "Could not connect to the server. Please try again later.",
+      variant: "destructive",
+    })
   }
+}
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
