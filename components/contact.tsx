@@ -57,7 +57,7 @@ export function Contact() {
   if (!validateForm()) return
 
   try {
-    const response = await fetch("https://contact-worker.<your-username>.workers.dev", {
+    const response = await fetch("https://cybersoftback.nurlanbcg.workers.dev", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
